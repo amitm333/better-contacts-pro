@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Better Contacts Pro for Mac</title>
+<meta name="description" content="Clean up duplicate contacts safely, edit your whole address book like a spreadsheet, and keep a live Excel copy with automatic backups. All on your Mac.">
+<meta property="og:title" content="Better Contacts Pro: your contacts, finally under control">
+<meta property="og:description" content="Duplicates, spreadsheet editing, live Excel sync and backups for Mac. Nothing leaves your Mac.">
+<meta property="og:image" content="AS-01.png">
+<link rel="icon" href="icon.png">
+<style>
+:root{--brand:#3A0CA3;--brand2:#4361ee;--ink:#14121f;--muted:#5d5a6e;--bg:#ffffff;--soft:#f5f3fb;--line:#e6e2f2;--card:#ffffff}
+@media (prefers-color-scheme: dark){:root{--ink:#f1effa;--muted:#a9a5bd;--bg:#0f0d1a;--soft:#17142a;--line:#2a2642;--card:#1a1730}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+nav .brand{display:flex;gap:10px;align-items:center;font-weight:700;text-decoration:none}
+nav .brand img{width:34px;height:34px}
+nav .links a{margin-left:22px;text-decoration:none;color:var(--muted);font-size:15px}
+.btn{display:inline-block;padding:13px 22px;border-radius:12px;background:#fff;color:var(--brand);font-weight:700;text-decoration:none}
+.btn.ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.55)}
+.btn.solid{background:var(--brand);color:#fff}
+header.hero{color:#fff;background:radial-gradient(1100px 600px at 10% 0%,#5b2ee0 0%,transparent 60%),radial-gradient(900px 700px at 100% 100%,var(--brand2) 0%,transparent 55%),var(--brand);padding-bottom:0;overflow:hidden}
+header.hero nav .links a{color:rgba(255,255,255,.8)}
+.hero h1{font-size:clamp(38px,6vw,68px);line-height:1.04;letter-spacing:-1.5px;margin:36px 0 16px;max-width:880px}
+.hero p.lead{font-size:clamp(18px,2.2vw,22px);max-width:720px;opacity:.9;margin:0 0 28px}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+.hero .note{font-size:14px;opacity:.75;margin-top:14px}
+.hero .shot{margin:48px auto -6px;display:block;width:100%;max-width:1100px;border-radius:14px 14px 0 0;box-shadow:0 30px 80px rgba(0,0,0,.4)}
+section{padding:84px 0}
+section.soft{background:var(--soft)}
+h2{font-size:clamp(28px,4vw,42px);letter-spacing:-.8px;line-height:1.1;margin:0 0 14px}
+.sub{color:var(--muted);font-size:19px;max-width:720px;margin:0 0 40px}
+.feature{display:grid;grid-template-columns:1fr 1.35fr;gap:48px;align-items:center;margin-bottom:84px}
+.feature:nth-child(even){grid-template-columns:1.35fr 1fr}
+.feature:nth-child(even) .text{order:2}
+.feature img,.feature video{width:100%;border-radius:12px;box-shadow:0 18px 50px rgba(20,10,60,.18);border:1px solid var(--line)}
+.feature h3{font-size:30px;letter-spacing:-.5px;margin:0 0 12px;line-height:1.15}
+.feature ul{padding-left:20px;color:var(--muted);margin:14px 0 0}
+.feature li{margin:6px 0}
+.kicker{text-transform:uppercase;font-size:13px;letter-spacing:1.4px;color:var(--brand2);font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+.tile b{display:block;margin-bottom:6px;font-size:18px}
+.tile span{color:var(--muted);font-size:15px}
+.price{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:860px}
+.plan{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px}
+.plan.pro{border:2px solid var(--brand2)}
+.plan .amt{font-size:42px;font-weight:800;letter-spacing:-1px}
+.plan ul{padding-left:20px;color:var(--muted)}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:10px}
+summary{font-weight:650;cursor:pointer}
+details p{color:var(--muted);margin:10px 0 0}
+footer{padding:40px 0;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+footer a{margin-right:18px}
+.video{width:100%;border-radius:14px;box-shadow:0 24px 60px rgba(20,10,60,.25)}
+@media (max-width:820px){.feature,.feature:nth-child(even){grid-template-columns:1fr}.feature:nth-child(even) .text{order:0}.grid{grid-template-columns:1fr}.price{grid-template-columns:1fr}nav .links a:not(.keep){display:none}section{padding:56px 0}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <nav><a class="brand" href="#"><img src="icon.png" alt=""> Better Contacts Pro</a>
+      <div class="links"><a href="#features">Features</a><a href="#video">Video</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a class="keep" href="support.html">Support</a></div></nav>
+    <h1>Your contacts, finally under control.</h1>
+    <p class="lead">Clean up duplicates safely, edit your whole address book like a spreadsheet, and keep a live Excel copy with automatic backups. All on your Mac.</p>
+    <div class="cta"><a class="btn" href="[APP_STORE_LINK]">Download on the Mac App Store</a><a class="btn ghost" href="#video">Watch the 1-minute tour</a></div>
+    <div class="note">Free to try · Pro is a one-time purchase · macOS 14 or later</div>
+    <img class="shot" src="01-spreadsheet.png" alt="Better Contacts Pro showing contacts as a spreadsheet">
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="grid">
+      <div class="tile"><b>😵 Three versions of the same client?</b><span>Find and merge duplicates side by side, with a preview and a safety copy.</span></div>
+      <div class="tile"><b>📊 Need a clean list in Excel?</b><span>It's always there, updated automatically, and you can edit it and import back.</span></div>
+      <div class="tile"><b>🔒 Worried about privacy?</b><span>No account, no servers, no tracking. Your contacts never leave your Mac.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="features" class="soft">
+  <div class="wrap">
+    <div class="feature">
+      <div class="text"><div class="kicker">Clean up</div><h3>Find duplicates. Merge them safely.</h3>
+        <p>Every version side by side, with a preview of the merged card. Keep one, merge, delete all or mark as "not duplicates", one set at a time or all at once.</p>
+        <ul><li>Matches names, phone numbers in any format, and emails</li><li>Never lumps together colleagues or family who share a number</li><li>A safety copy is saved before every change</li></ul></div>
+      <img src="03-duplicates.png" alt="Duplicates shown side by side">
+    </div>
+    <div class="feature">
+      <div class="text"><div class="kicker">Fix phone numbers</div><h3>Every number, ready to dial from anywhere.</h3>
+        <p>Adds missing country codes (with +) so numbers work from abroad, on WhatsApp and on your iPhone. It knows the UAE numbering plan and 40 other countries, and asks you when a number could belong to more than one.</p>
+        <ul><li>Uses clues on each contact: address, email domain, other numbers</li><li>Cleans up 00 prefixes, stray zeros and two numbers in one field</li><li>Leaves UAE 800/600 service numbers alone</li></ul></div>
+      <img src="22-fix-phones.png" alt="Fix Phone Numbers">
+    </div>
+    <div class="feature">
+      <div class="text"><div class="kicker">Find in Mail</div><h3>Your inbox knows people your contacts don't.</h3>
+        <p>Reads Apple Mail on your Mac to suggest missing email addresses, phone numbers from email signatures, and new contacts for the real people you correspond with. Newsletters and automated senders are left out.</p>
+        <ul><li>Nothing leaves your Mac</li><li>Every suggestion is reviewed before it's added</li></ul></div>
+      <img src="21-find-in-mail.png" alt="Find in Mail suggestions">
+    </div>
+    <div class="feature">
+      <div class="text"><div class="kicker">Organise</div><h3>Filter like Excel. Save searches you use every day.</h3>
+        <p>Sort by any column, pick values to filter on, and edit any field right in the table. Save "London investors" or "VIP clients" as a Smart Search.</p>
+        <ul><li>Groups you can browse and edit as a table</li><li>Search every field, including notes</li><li>See who's missing a phone, email or LinkedIn</li></ul></div>
+      <img src="06-column-filter.png" alt="Excel-style column filters">
+    </div>
+    <div class="feature">
+      <div class="text"><div class="kicker">Every detail</div><h3>Everything one click away.</h3>
+        <p>Clickable phones, emails, websites and addresses. Copy any detail in one click, share a contact, add photos and notes. LinkedIn, Facebook, X and Instagram profiles sit on every card: look someone up inside the app and add their title, company and photo in one click.</p></div>
+      <img src="02-contact-card.png" alt="Contact card with photo and notes">
+    </div>
+    <div class="feature">
+      <div class="text"><div class="kicker">Excel, both ways</div><h3>Edit in Excel. Review. Apply.</h3>
+        <p>Your contacts are kept as a live spreadsheet in a folder you choose. Edit a copy in Excel or Numbers, and Better Contacts Pro shows you every change before anything is touched.</p>
+        <ul><li>Add new people by adding rows, or restore deleted contacts from a backup</li><li>Import and export vCards with photos and notes</li><li>Automatic backups (spreadsheet plus vCard), daily, weekly or monthly</li></ul></div>
+      <img src="12-import-review.png" alt="Review changes from Excel before applying">
+    </div>
+    <div class="feature">
+      <div class="text"><div class="kicker">Connected</div><h3>Bring in your LinkedIn network.</h3>
+        <p>Import LinkedIn's own Connections export to add profile links, companies and job titles, reviewed before anything changes.</p></div>
+      <img src="13-linkedin.png" alt="LinkedIn import review">
+    </div>
+    <div class="feature">
+      <div class="text"><div class="kicker">Native</div><h3>Beautiful in light and dark.</h3>
+        <p>A real Mac app: fast, keyboard friendly, and at home in light, dark or automatic appearance.</p></div>
+      <img src="14-dark-cards.png" alt="Dark mode">
+    </div>
+  </div>
+</section>
+
+<section id="video">
+  <div class="wrap">
+    <h2>See it in action</h2>
+    <p class="sub">One minute, real app, fictional contacts.</p>
+    <video class="video" controls preload="metadata" poster="promo-poster.jpg" src="promo.mp4"></video>
+  </div>
+</section>
+
+<section id="pricing" class="soft">
+  <div class="wrap">
+    <h2>Simple pricing. No subscription.</h2>
+    <p class="sub">Download free and see exactly what needs fixing. Upgrade once to fix it.</p>
+    <div class="price">
+      <div class="plan"><div class="kicker">Free</div><div class="amt">$0</div>
+        <ul><li>Spreadsheet and card views</li><li>Sort, filter, search</li><li>See all your duplicates</li><li>Missing-info lists</li><li>Groups, copy and share</li></ul></div>
+      <div class="plan pro"><div class="kicker">Pro: one-time</div><div class="amt">$24.99</div>
+        <ul><li>Everything in Free, plus:</li><li>Merge and Merge All duplicates</li><li>Fix Phone Numbers and Find in Mail</li><li>Edit anywhere, photos and notes</li><li>Smart Searches</li><li>Live Excel sync and import</li><li>Automatic backups and LinkedIn import</li><li>Family Sharing</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <h2>Questions</h2>
+    <details><summary>Does it replace Apple Contacts?</summary><p>No. It works on the same contacts, so every change appears in Apple Contacts and on your iPhone and iPad through iCloud (or Exchange or Google).</p></details>
+    <details><summary>Could it damage my contacts?</summary><p>Before any merge, delete or import, a .vcf copy of every affected contact is saved to your folder. Imports show a review first, and automatic backups run on your schedule.</p></details>
+    <details><summary>Do my contacts leave my Mac?</summary><p>Never. There's no account and no server, and the app makes no network requests with your data.</p></details>
+    <details><summary>Do I need Microsoft Excel?</summary><p>No. The .xlsx file opens in Excel, Numbers or Google Sheets.</p></details>
+    <details><summary>How does LinkedIn import work?</summary><p>You download your Connections file from LinkedIn's settings, then import it. The app never logs in to LinkedIn.</p></details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap"><a href="support.html">Support</a><a href="privacy.html">Privacy Policy</a><span>© 2026 Wealthbullet. Mac, macOS, iCloud and Numbers are trademarks of Apple Inc. Excel is a trademark of Microsoft. LinkedIn is a trademark of LinkedIn Corporation. Screenshots show fictional people.</span></div>
+</footer>
+</body>
+</html>
